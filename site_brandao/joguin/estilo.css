@@ -1,39 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
     text-align: center;
     background-image: url(pers/walp.jpg);
     background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 img {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    border: solid;
+}
+img:hover{
+    height: 110px;
+    width: 110px;
+}
+
+.img_final{
+    height: 110px;
+    width: 110px;
     border-radius: 20px;
 }
 
 button {
-    border-radius: 20px;
-    background-color: aqua;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: solid;
+    border-radius: 10px;
+    background-color: rgb(73, 145, 145);
+    font-weight: bold;
     font-size: 30px;
     outline: none;
 }
 
-label,
-a {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.confirmation{
+    cursor:pointer;
+    margin-top:2em;
+    padding:.5em;
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:2em;
+    border:solid;
+    font-size:16px;
+    background:#01cec7;
+    color:#000;
+    font-weight:bold;
+}
+.cursor{
+    cursor: auto;
+}
+
+label, a {
+
     font-size: 30px;
     background-color: aqua;
     color: black;
 }
 
-h2,h2 {
-    color: white;
-    background-color: black;
-    width: 200px;
-}
 
 .barra_vida{
     background-color: blue;
-    width: 900px;
     height: 10px;
+}
+
+.selection_person{
+    border: solid;
+    background-color: black;
+    border-radius: 20px;
+    margin-inline-end: 145px;
+    margin-inline-start: 145px;
+    margin-bottom: 20px; 
+}
+
+.selection_person img{
+    cursor:pointer;
+}
+
+
+.format{
+    width: 100vw;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.titulo{
+    color: white;
+    background-color: black;
+    width: auto;
+    margin-right: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.row{
+    margin-bottom: 15px;
+}
+
+.border{
+    border: solid;
+    border-width: 2px;
+    border-color: #000;
+    background-image: url(pers/walp2.jpg);
+    background-size: 100%;
+
 }

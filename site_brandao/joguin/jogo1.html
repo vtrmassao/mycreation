@@ -12,90 +12,122 @@
 <body>
     <div id="todo">
         <div id="divimg">
-            <h2> Player 1:</h2>
-            <h2>Selecione o seu personagem</h2>
-
-            <div>
-                <img src="pers/gaara.png" id="gaara" onclick="clique(gaara)">
-
-                <img src="pers/naruto.jpg" id="naruto" onclick="clique(naruto)">
-
-                <img src="pers/shikamaru.jpg" id="shikamaru" onclick="clique(shikamaru)">
-
-                <img src="pers/neji.png" id="neji" onclick="clique(neji)">
-
-                <img src="pers/rocklee.png" id="rocklee" onclick="clique(rocklee)">
-
-                <img src="pers/sasuke.jpg" id="sasuke" onclick="clique(sasuke)">
+            <div class="format">
+                <div class="titulo">
+                    Selecione o seu personagem
+                </div>
+                <div class="titulo">
+                    Player 1:
+                </div>
             </div>
-            <br>
-            <br>
-            <br>
+            <div class="selection_person">
+                <img src="pers/gaara.png" id="gaara" onclick="clique(gaara)">
+                <img src="pers/naruto.jpg" id="naruto" onclick="clique(naruto)">
+                <img src="pers/shikamaru.jpg" id="shikamaru" onclick="clique(shikamaru)">
+                <img src="pers/neji.png" id="neji" onclick="clique(neji)">
+                <img src="pers/rocklee.png" id="rocklee" onclick="clique(rocklee)">
+                <img src="pers/sasuke.jpg" id="sasuke" onclick="clique(sasuke)">
+                <img src="pers/kakashi.jpeg" id="kakashi" onclick="clique(kakashi)">
+                <img src="pers/nagato.jpg" id="nagato" onclick="clique(nagato)">
+                <img src="pers/orochimaru.jpg" id="orochimaru" onclick="clique(orochimaru)">
+            </div>
 
-            <div id="sla" style="display:none">
+            <div id="sla" style="display:none" class="row">
                 <img src="" id="selecionado">
             </div>
-            <br>
-            <br>
 
-            <button type="button" onclick="confirmar()">Clique aqui para escolher este personagem</button> <br> <br>
-
+            <div class="row">
+                <button type="button" class="confirmation" onclick="confirmar()">Clique aqui para escolher este
+                    personagem</button>
+            </div>
             <div style="display:none" id="div2">
-                <button type="button" onclick="conf()">Confirmar</button>
+                <button type="button" class="confirmation" onclick="conf()">Confirmar</button>
             </div>
         </div>
         <div id="divimg2" style="display:none">
-            <h2>Player 2</h2>
-            <h2>Selecione o seu personagem</h2>
-            <img src="pers/gaara.png" id="gaara2" onclick="clique2(gaara2)">
+            <div class="format">
+                <div class="titulo">
+                    Selecione o seu personagem
+                </div>
+                <div class="titulo">
+                    Player 2:
+                </div>
+            </div>
+            <div class="selection_person">
+                <img src="pers/gaara.png" id="gaara2" onclick="clique2(gaara2)">
+                <img src="pers/naruto.jpg" id="naruto2" onclick="clique2(naruto2)">
+                <img src="pers/shikamaru.jpg" id="shikamaru2" onclick="clique2(shikamaru2)">
+                <img src="pers/neji.png" id="neji2" onclick="clique2(neji2)">
+                <img src="pers/rocklee.png" id="rocklee2" onclick="clique2(rocklee2)">
+                <img src="pers/sasuke.jpg" id="sasuke2" onclick="clique2(sasuke2)">
+                <img src="pers/kakashi.jpeg" id="kakashi2" onclick="clique2(kakashi2)">
+                <img src="pers/nagato.jpg" id="nagato2" onclick="clique2(nagato2)">
+                <img src="pers/orochimaru.jpg" id="orochimaru2" onclick="clique2(orochimaru2)">
+            </div>
 
-            <img src="pers/naruto.jpg" id="naruto2" onclick="clique2(naruto2)">
-
-            <img src="pers/shikamaru.jpg" id="shikamaru2" onclick="clique2(shikamaru2)">
-
-            <img src="pers/neji.png" id="neji2" onclick="clique2(neji2)">
-
-            <img src="pers/rocklee.png" id="rocklee2" onclick="clique2(rocklee2)">
-
-            <img src="pers/sasuke.jpg" id="sasuke2" onclick="clique2(sasuke2)">
-
-            <br>
-            <br>
-            <br>
-
-            <div id="div3" style="display:none">
+            <div id="div3" style="display:none" class="row">
                 <img src="" id="selecionado2">
-            </div> <br>
-            <br>
-
-            <button type="button" onclick="confirmar2()">Clique aqui para escolher este personagem</button> <br> <br>
+            </div>
+            <div class="row">
+                <button type="button" class="confirmation" onclick="confirmar2()">Clique aqui para escolher este
+                    personagem</button>
+            </div>
 
             <div style="display:none" id="div4">
-                <button type="button" onclick="conf2()">Confirmar</button>
+                <button type="button" class="confirmation" onclick="conf2()">Confirmar</button>
             </div>
         </div>
     </div>
-    <div id="final" style="display:none">
+    <div id="final" style="display:none" class="format">
+        <div id="contagem">10</div>
         <div style="display:none" id="recomecar">
-            <div id="winner" style="font-size:20px; display: none"></div> <br> <br>
-            <a href="sla123.html">Jogar novamente</a>
+            <div id="winner" class="row confirmation cursor"></div>
+            <a href="sla123.html" class="confirmation">Jogar novamente</a>
         </div>
-        <h2> PLAYER1</h2>
-        <img src="" id="play1" width="300px" height="250px"> <br>
-        <button id="play1_div" class="barra_vida"></button> <br>
-        <button type="button" onclick="apanhar(play1_div, play1, selecionado2)" disabled>Player1 utilize a seta para
-            cima</button> <br>
-
-
-        <h2> PLAYER1</h2>
-        <img src="" id="play2" width="300px" height="250px"> <br>
-        <button id="play2_div" class="barra_vida"></button> <br>
-        <button type="button" onclick="apanhar(play2_div, play2, selecionado)" disabled>Player2 utilize a seta para
-            baixo</button>
-        <br>
-        <br>
-        <br>
-
+        <div class="border">
+            <div class="format">
+                <div class="titulo">
+                    PLAYER1
+                </div>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="row">
+                        <img src="" id="play1" class="img_final">
+                    </div>
+                    <div class="row">
+                        <button id="play1_div" class="barra_vida" style="width: 900px;"></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="confirmation cursor"
+                            onclick="apanhar(play1_div, play1, selecionado2)" disabled>Player1 utilize a seta para
+                            cima</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border">
+            <div class="format">
+                <div class="titulo">
+                    PLAYER2
+                </div>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="row">
+                        <img src="" id="play2" class="img_final">
+                    </div>
+                    <div class="row">
+                        <button id="play2_div" class="barra_vida" style="width: 900px;"></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="confirmation cursor"
+                            onclick="apanhar(play2_div, play2, selecionado)" disabled>Player2 utilize a seta para
+                            baixo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script>
@@ -155,28 +187,12 @@
 
     // }
 
-    window.addEventListener("keydown", checkKeyPress2, false);
     // The parameters of the event listener are event, function to run, useCapture (optional).
     // This event listener runs checkKeyPress function when a key is pressed down
     // You can use keydown or keyup to check what key has been pressed or released
 
     // this function checks to see if the letter 'a' key has been pressed
 
-    function checkKeyPress2(key) {
-        if (key.keyCode == "40") {
-            var tamanho = parseInt(play1_div.style.width) - 25;
-
-            play1_div.style.width = tamanho + "px";
-
-            if (tamanho == 0) {
-                play1.src = 'pers/caixao.jpg'
-                winner.innerHTML = `<label> Player2 é o vencedor </label>`;
-                winner.style.display = "inline";
-                play1_div.style.display = "none";
-                recomecar.style.display = "inline";
-            }
-        }
-    }
 
     window.addEventListener("keydown", checkKeyPress, false);
 
@@ -188,9 +204,22 @@
 
             if (tamanho == 0) {
                 play2.src = 'pers/caixao.jpg'
-                winner.innerHTML = `<label> Player1 é o vencedor </label>`;
+                winner.innerHTML = ` Player1 é o vencedor `;
                 winner.style.display = "inline";
                 play2_div.style.display = "none";
+                recomecar.style.display = "inline";
+            }
+        }
+        if (key.keyCode == "40") {
+            var tamanho = parseInt(play1_div.style.width) - 25;
+
+            play1_div.style.width = tamanho + "px";
+
+            if (tamanho == 0) {
+                play1.src = 'pers/caixao.jpg'
+                winner.innerHTML = ` Player2 é o vencedor `;
+                winner.style.display = "inline";
+                play1_div.style.display = "none";
                 recomecar.style.display = "inline";
             }
         }
