@@ -8,6 +8,15 @@
     <title>joguin</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+<script>
+    var som1 = new Audio();
+    var som2 = new Audio();
+    var som3 = new Audio();
+    som1.src = 'https://www.soundjay.com/phone/sounds/cell-phone-flip-1.mp3';
+    som2.src = 'https://www.soundjay.com/misc/sounds/whistle-flute-1.mp3';
+    som3.src = 'pers/selection.wav';
+
+</script>
 
 <body>
     <div id="todo">
@@ -21,7 +30,7 @@
                 </div>
             </div>
             <div class="selection_person">
-                <img src="pers/gaara.png" id="gaara" onclick="clique(gaara)">
+                <img src="pers/gaara.png" id="gaara" onclick="clique(gaara)" onmouseover="som3.play()">
                 <img src="pers/naruto.jpg" id="naruto" onclick="clique(naruto)">
                 <img src="pers/shikamaru.jpg" id="shikamaru" onclick="clique(shikamaru)">
                 <img src="pers/neji.png" id="neji" onclick="clique(neji)">
@@ -79,10 +88,12 @@
         </div>
     </div>
     <div id="final" style="display:none" class="format">
-        <div id="contagem">10</div>
+        <div class="format">
+            <div id="contagem" class="titulo"></div>
+        </div>
         <div style="display:none" id="recomecar">
             <div id="winner" class="row confirmation cursor"></div>
-            <a href="sla123.html" class="confirmation">Jogar novamente</a>
+            <a href="jogo1.html" class="confirmation">Jogar novamente</a>
         </div>
         <div class="border">
             <div class="format">
@@ -160,6 +171,30 @@
         final.style.display = "inline";
         play1.src = selecionado.src;
         play2.src = selecionado2.src;
+        start();
+    }
+
+    //temporizador
+    var count = 6;
+
+    function start() {
+        if (count >= 0) {
+            count--;
+            if (Number(count) == 0) {
+                count = "PREPAREM-SE";
+            }
+            else if (count < 10) {
+                count = "0" + count;
+            }
+            contagem.innerHTML = count;
+            setTimeout('start(); som1.play();', 1000);
+        }
+        else {
+            contagem.style.display = "none";
+            som2.play();
+        }
+
+
     }
 
     // FUNCTION BUTTON USING PARAMETERS - APANHAR
@@ -187,13 +222,7 @@
 
     // }
 
-    // The parameters of the event listener are event, function to run, useCapture (optional).
-    // This event listener runs checkKeyPress function when a key is pressed down
-    // You can use keydown or keyup to check what key has been pressed or released
-
-    // this function checks to see if the letter 'a' key has been pressed
-
-
+    //evento quando pressionada a tecla específica
     window.addEventListener("keydown", checkKeyPress, false);
 
     function checkKeyPress(key) {

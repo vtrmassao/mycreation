@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="start();">
+    <div id="tempo"></div>
+</body>
+<script>
+    var count = 10;
+
+    function start(){
+        if((count - 1) >= 0){
+            count--;
+            tempo.innerHTML=count;
+            setTimeout('start();',1000);
+        }
+    }
+</script>
+</html>

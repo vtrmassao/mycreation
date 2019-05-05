@@ -14,9 +14,10 @@ img {
     border-radius: 20px;
     border: solid;
 }
-img:hover{
+.selection_person img:hover{
     height: 110px;
     width: 110px;
+    cursor:pointer;
 }
 
 .img_final{
@@ -74,9 +75,6 @@ label, a {
     margin-bottom: 20px; 
 }
 
-.selection_person img{
-    cursor:pointer;
-}
 
 
 .format{
@@ -96,6 +94,10 @@ label, a {
     margin-right: 50px;
     font-size: 20px;
     border-radius: 5px;
+}
+
+#contagem{
+    font-size: 50px;
 }
 
 .row{
