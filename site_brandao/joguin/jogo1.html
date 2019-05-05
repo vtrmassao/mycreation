@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>joguin</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="todo">
+        <div id="divimg">
+            <h2> Player 1:</h2>
+            <h2>Selecione o seu personagem</h2>
+
+            <div>
+                <img src="pers/gaara.png" id="gaara" onclick="clique(gaara)">
+
+                <img src="pers/naruto.jpg" id="naruto" onclick="clique(naruto)">
+
+                <img src="pers/shikamaru.jpg" id="shikamaru" onclick="clique(shikamaru)">
+
+                <img src="pers/neji.png" id="neji" onclick="clique(neji)">
+
+                <img src="pers/rocklee.png" id="rocklee" onclick="clique(rocklee)">
+
+                <img src="pers/sasuke.jpg" id="sasuke" onclick="clique(sasuke)">
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <div id="sla" style="display:none">
+                <img src="" id="selecionado">
+            </div>
+            <br>
+            <br>
+
+            <button type="button" onclick="confirmar()">Clique aqui para escolher este personagem</button> <br> <br>
+
+            <div style="display:none" id="div2">
+                <button type="button" onclick="conf()">Confirmar</button>
+            </div>
+        </div>
+        <div id="divimg2" style="display:none">
+            <h2>Player 2</h2>
+            <h2>Selecione o seu personagem</h2>
+            <img src="pers/gaara.png" id="gaara2" onclick="clique2(gaara2)">
+
+            <img src="pers/naruto.jpg" id="naruto2" onclick="clique2(naruto2)">
+
+            <img src="pers/shikamaru.jpg" id="shikamaru2" onclick="clique2(shikamaru2)">
+
+            <img src="pers/neji.png" id="neji2" onclick="clique2(neji2)">
+
+            <img src="pers/rocklee.png" id="rocklee2" onclick="clique2(rocklee2)">
+
+            <img src="pers/sasuke.jpg" id="sasuke2" onclick="clique2(sasuke2)">
+
+            <br>
+            <br>
+            <br>
+
+            <div id="div3" style="display:none">
+                <img src="" id="selecionado2">
+            </div> <br>
+            <br>
+
+            <button type="button" onclick="confirmar2()">Clique aqui para escolher este personagem</button> <br> <br>
+
+            <div style="display:none" id="div4">
+                <button type="button" onclick="conf2()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+    <div id="final" style="display:none">
+        <div style="display:none" id="recomecar">
+            <div id="winner" style="font-size:20px; display: none"></div> <br> <br>
+            <a href="sla123.html">Jogar novamente</a>
+        </div>
+        <h2> PLAYER1</h2>
+        <img src="" id="play1" width="300px" height="250px"> <br>
+        <button id="play1_div" class="barra_vida"></button> <br>
+        <button type="button" onclick="apanhar(play1_div, play1, selecionado2)" disabled>Player1 utilize a seta para
+            cima</button> <br>
+
+
+        <h2> PLAYER1</h2>
+        <img src="" id="play2" width="300px" height="250px"> <br>
+        <button id="play2_div" class="barra_vida"></button> <br>
+        <button type="button" onclick="apanhar(play2_div, play2, selecionado)" disabled>Player2 utilize a seta para
+            baixo</button>
+        <br>
+        <br>
+        <br>
+
+    </div>
+</body>
+<script>
+    function clique(pers) {
+        selecionado.src = pers.src;
+        sla.style.display = "inline";
+    }
+    function confirmar() {
+        if (sla.style.display == "inline") {
+            div2.style.display = "inline"
+        };
+    }
+    function conf() {
+        divimg.style.display = "none";
+        divimg2.style.display = "inline";
+    }
+    function clique2(pers) {
+        selecionado2.src = pers.src;
+        div3.style.display = "inline";
+    }
+    function confirmar2() {
+        if (div3.style.display == "inline") {
+            div4.style.display = "inline"
+        };
+    }
+    function conf2() {
+        divimg.style.display = "none";
+        divimg2.style.display = "inline";
+        todo.style.display = "none";
+        final.style.display = "inline";
+        play1.src = selecionado.src;
+        play2.src = selecionado2.src;
+    }
+
+    // FUNCTION BUTTON USING PARAMETERS - APANHAR
+
+    // function apanhar(bnc, imge, pers) {
+
+
+    //     var tamanho = parseInt(bnc.style.width) - 25;
+    //     bnc.style.width = tamanho + "px";
+
+    //     if (tamanho == 0) {
+    //         imge.src = 'pers/caixao.jpg'
+    //         bnc.style.color = 'red';
+    //     };
+    //     if (play1_div.style.width == 0 + "px") {
+    //         winner.style.display = "inline";
+    //         winner.innerHTML = `<label> Player2 é o vencedor </label>`;
+    //         bnc.style.display = "none";
+    //     };
+    //     if (play2_div.style.width == 0 + "px") {
+    //         winner.style.display = "inline";
+    //         winner.innerHTML = ` <label> Player1 é o vencedor </label>`;
+    //         bnc.style.display = "none";
+    //     }
+
+    // }
+
+    window.addEventListener("keydown", checkKeyPress2, false);
+    // The parameters of the event listener are event, function to run, useCapture (optional).
+    // This event listener runs checkKeyPress function when a key is pressed down
+    // You can use keydown or keyup to check what key has been pressed or released
+
+    // this function checks to see if the letter 'a' key has been pressed
+
+    function checkKeyPress2(key) {
+        if (key.keyCode == "40") {
+            var tamanho = parseInt(play1_div.style.width) - 25;
+
+            play1_div.style.width = tamanho + "px";
+
+            if (tamanho == 0) {
+                play1.src = 'pers/caixao.jpg'
+                winner.innerHTML = `<label> Player2 é o vencedor </label>`;
+                winner.style.display = "inline";
+                play1_div.style.display = "none";
+                recomecar.style.display = "inline";
+            }
+        }
+    }
+
+    window.addEventListener("keydown", checkKeyPress, false);
+
+    function checkKeyPress(key) {
+        if (key.keyCode == "38") {
+            var tamanho = parseInt(play2_div.style.width) - 25;
+
+            play2_div.style.width = tamanho + "px";
+
+            if (tamanho == 0) {
+                play2.src = 'pers/caixao.jpg'
+                winner.innerHTML = `<label> Player1 é o vencedor </label>`;
+                winner.style.display = "inline";
+                play2_div.style.display = "none";
+                recomecar.style.display = "inline";
+            }
+        }
+    }
+
+</script>
+
+</html>

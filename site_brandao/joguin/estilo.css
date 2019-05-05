@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    background-image: url(pers/walp.jpg);
+    background-size: 100%;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+button {
+    border-radius: 20px;
+    background-color: aqua;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    outline: none;
+}
+
+label,
+a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    background-color: aqua;
+    color: black;
+}
+
+h2,h2 {
+    color: white;
+    background-color: black;
+    width: 200px;
+}
+
+.barra_vida{
+    background-color: blue;
+    width: 900px;
+    height: 10px;
+}
