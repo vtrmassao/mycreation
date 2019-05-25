@@ -2,10 +2,11 @@
 
 body {
     text-align: center;
-    background-image: url(pers/walp.jpg);
+    background-image: url(../pers/walp.jpg);
     background-size: 100%;
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
+    
 }
 
 img {
@@ -108,7 +109,25 @@ label, a {
     border: solid;
     border-width: 2px;
     border-color: #000;
-    background-image: url(pers/walp2.jpg);
-    background-size: 100%;
+    background-image: url(../pers/walp2.jpg);
 
+}
+
+.margin{
+    margin-top: 25px;
+}
+
+.border2{
+    background-color: rgba(0, 0, 0, 0.616);
+    width: 500px;
+    height: 300px;
+    margin-left: 30%;
+    margin-top: 10%;
+    border: solid;
+    border-width: 2px;
+    border-color: #000;
+}
+
+h2{
+    color: white;
 }

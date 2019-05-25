@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>joguin</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div style="display: none;">
+        <form id="form_parte1" method="post" onsubmit="return cadastrar()">
+            <input type="text" id="jog1" name="jogador1" class="validate">
+            <input type="text" id="jog2" name="jogador2" class="validate">
+        </form>
+    </div>
+    <div id="todo">
+        <div id="divimg">
+            <div class="format">
+                <div class="titulo">
+                    Selecione o seu personagem
+                </div>
+                <div class="titulo">
+                    Player 1:
+                </div>
+            </div>
+            <div class="selection_person">
+                <img src="pers/gaara.png" id="gaara" onclick="clique(gaara)" onmouseover="som3.play()">
+                <img src="pers/naruto.jpg" id="naruto" onclick="clique(naruto)">
+                <img src="pers/shikamaru.jpg" id="shikamaru" onclick="clique(shikamaru)">
+                <img src="pers/neji.png" id="neji" onclick="clique(neji)">
+                <img src="pers/rocklee.png" id="rocklee" onclick="clique(rocklee)">
+                <img src="pers/sasuke.jpg" id="sasuke" onclick="clique(sasuke)">
+                <img src="pers/kakashi.jpeg" id="kakashi" onclick="clique(kakashi)">
+                <img src="pers/nagato.jpg" id="nagato" onclick="clique(nagato)">
+                <img src="pers/orochimaru.jpg" id="orochimaru" onclick="clique(orochimaru)">
+            </div>
+
+            <div id="sla" style="display:none" class="row">
+                <img src="" id="selecionado">
+            </div>
+
+            <div class="row">
+                <button type="button" class="confirmation" onclick="confirmar()">Clique aqui para escolher este
+                    personagem</button>
+            </div>
+            <div style="display:none" id="div2">
+                <button type="button" class="confirmation" onclick="conf()">Confirmar</button>
+            </div>
+        </div>
+        <div id="divimg2" style="display:none">
+            <div class="format">
+                <div class="titulo">
+                    Selecione o seu personagem
+                </div>
+                <div class="titulo">
+                    Player 2:
+                </div>
+            </div>
+            <div class="selection_person">
+                <img src="pers/gaara.png" id="gaara2" onclick="clique2(gaara2)">
+                <img src="pers/naruto.jpg" id="naruto2" onclick="clique2(naruto2)">
+                <img src="pers/shikamaru.jpg" id="shikamaru2" onclick="clique2(shikamaru2)">
+                <img src="pers/neji.png" id="neji2" onclick="clique2(neji2)">
+                <img src="pers/rocklee.png" id="rocklee2" onclick="clique2(rocklee2)">
+                <img src="pers/sasuke.jpg" id="sasuke2" onclick="clique2(sasuke2)">
+                <img src="pers/kakashi.jpeg" id="kakashi2" onclick="clique2(kakashi2)">
+                <img src="pers/nagato.jpg" id="nagato2" onclick="clique2(nagato2)">
+                <img src="pers/orochimaru.jpg" id="orochimaru2" onclick="clique2(orochimaru2)">
+            </div>
+
+            <div id="div3" style="display:none" class="row">
+                <img src="" id="selecionado2">
+            </div>
+            <div class="row">
+                <button type="button" class="confirmation" onclick="confirmar2()">Clique aqui para escolher este
+                    personagem</button>
+            </div>
+
+            <div style="display:none" id="div4">
+                <button type="button" class="confirmation" id="finalbutton" onclick="conf2()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var teste = '';
+    function clique(pers) {
+        teste = pers.src;
+        selecionado.src = pers.src;
+        sla.style.display = "inline";
+    }
+    function confirmar() {
+        if (sla.style.display == "inline") {
+            div2.style.display = "inline"
+        };
+    }
+    function conf() {
+        divimg.style.display = "none";
+        divimg2.style.display = "inline";
+    }
+    function clique2(pers) {
+        selecionado2.src = pers.src;
+        div3.style.display = "inline";
+    }
+    function confirmar2() {
+        if (div3.style.display == "inline") {
+            div4.style.display = "inline"
+        };
+    }
+    function conf2() {
+        divimg.style.display = "none";
+        divimg2.style.display = "inline";
+        todo.style.display = "none";
+        jog1.value = selecionado.src;
+        jog2.value = selecionado2.src;
+        cadastrar();
+    }
+</script>
+
+<script type="text/javascript" src="js/parte1.js"></script>
+
+</html>
