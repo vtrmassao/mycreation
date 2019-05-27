@@ -12,28 +12,20 @@ function entrar() {
     aguardar();
     fetch('/usuarios/entrar', {
         method: "POST"
-    }).then(function (response, person1, person2) {
+    }).then(function (response) {
         if (response.ok) {
-            play1.src = res.consulta.recordset[0].pers_play1;
-            play2.src = res.consulta.recordset[0].pers_play2;
-            if (count >= 0) {
-                count--;
-                if (Number(count) == 0) {
-                    count = "PREPAREM-SE";
-                }
-                else if (count < 10) {
-                    count = "0" + count;
-                }
-                contagem.innerHTML = count;
-                setTimeout('start(); som1.play();', 1000);
-            }
-            else {
-                contagem.style.display = "none";
-                alert('Comecem!');
-                butt.style.display = 'none';
-                final.style.display = 'inline'
-                som2.play();
-            }
+            response.json().then(function (resposta) {
+                play1.src = resposta.pers_play1;
+                play2.src = resposta.pers_play2;
+                play1_div.style.width = Number(resposta.pers_vida1)+"px";
+                play2_div.style.width = Number(resposta.pers_vida2)+"px";
+                pl1.innerHTML=resposta.nome1_jog;
+                pl2.innerHTML=resposta.nome2_jog;
+                btn_play1.innerHTML=`${resposta.nome1_jog} utilize a tecla Q`
+                btn_play2.innerHTML=`${resposta.nome2_jog} utilize a tecla P`
+                // play1_div.style.width = life2 + "px";
+                // play2_div.style.width = life1 + "px";
+            });
         } else {
             console.log('Erro !');
             finalizar_aguardar();

@@ -131,3 +131,16 @@ label, a {
 h2{
     color: white;
 }
+
+input{
+    width: 250px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    border: solid;
+    background-color:#01cec7;
+    border-radius: 15px;
+    outline: none;
+}
