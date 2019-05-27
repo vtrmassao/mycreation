@@ -37,7 +37,7 @@
                     </div>
                     <div class="row">
                         <button type="button" class="confirmation cursor" id="btn_play1"
-                            onclick="apanhar(play1_div, play1, selecionado2)" disabled>Player1 utilize a tecla
+                            onclick="apanhar(play1_div, play1, selecionado2)">Player1 utilize a tecla
                             Q</button>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="row">
                         <button type="button" class="confirmation cursor" id="btn_play2"
-                            onclick="apanhar(play2_div, play2, selecionado)" disabled>Player2 utilize a tecla P
+                            onclick="apanhar(play2_div, play2, selecionado)">Player2 utilize a tecla P
                         </button>
                     </div>
                 </div>
@@ -94,28 +94,28 @@
 
     // FUNCTION BUTTON USING PARAMETERS - APANHAR
 
-    // function apanhar(bnc, imge, pers) {
+    function apanhar(bnc, imge, pers) {
 
 
-    //     var tamanho = parseInt(bnc.style.width) - 25;
-    //     bnc.style.width = tamanho + "px";
+        var tamanho = parseInt(bnc.style.width) - 25;
+        bnc.style.width = tamanho + "px";
 
-    //     if (tamanho == 0) {
-    //         imge.src = 'pers/caixao.jpg'
-    //         bnc.style.color = 'red';
-    //     };
-    //     if (play1_div.style.width == 0 + "px") {
-    //         winner.style.display = "inline";
-    //         winner.innerHTML = `<label> Player2 é o vencedor </label>`;
-    //         bnc.style.display = "none";
-    //     };
-    //     if (play2_div.style.width == 0 + "px") {
-    //         winner.style.display = "inline";
-    //         winner.innerHTML = ` <label> Player1 é o vencedor </label>`;
-    //         bnc.style.display = "none";
-    //     }
+        if (tamanho == 0) {
+            imge.src = 'pers/caixao.jpg'
+            bnc.style.color = 'red';
+        };
+        if (play1_div.style.width == 0 + "px") {
+            winner.style.display = "inline";
+            winner.innerHTML = `<label> Player2 é o vencedor </label>`;
+            bnc.style.display = "none";
+        };
+        if (play2_div.style.width == 0 + "px") {
+            winner.style.display = "inline";
+            winner.innerHTML = ` <label> Player1 é o vencedor </label>`;
+            bnc.style.display = "none";
+        }
 
-    // }
+    }
 
 
     //evento quando pressionada a tecla específica
