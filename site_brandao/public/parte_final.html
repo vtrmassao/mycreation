@@ -100,19 +100,20 @@
         var tamanho = parseInt(bnc.style.width) - 25;
         bnc.style.width = tamanho + "px";
 
-        if (tamanho == 0) {
+        if (tamanho <= 0) {
             imge.src = 'pers/caixao.jpg'
-            bnc.style.color = 'red';
         };
         if (play1_div.style.width == 0 + "px") {
             winner.style.display = "inline";
-            winner.innerHTML = `<label> Player2 é o vencedor </label>`;
-            bnc.style.display = "none";
+            winner.innerHTML = ` ${pl2.innerHTML} é o vencedor `;
+            bnc.style.display = "none";            
+            recomecar.style.display = "inline";
         };
         if (play2_div.style.width == 0 + "px") {
-            winner.style.display = "inline";
-            winner.innerHTML = ` <label> Player1 é o vencedor </label>`;
             bnc.style.display = "none";
+            winner.innerHTML = ` ${pl1.innerHTML} é o vencedor `;
+            winner.style.display = "inline";
+            recomecar.style.display = "inline";
         }
 
     }
@@ -125,7 +126,7 @@
 
     function checkKeyPress(key) {
         //player 2, tecla P
-        if (key.keyCode == "81") {            
+        if (key.keyCode == "81") {
             var tamanho = parseInt(play2_div.style.width) - tam;
 
             play2_div.style.width = tamanho + "px";
